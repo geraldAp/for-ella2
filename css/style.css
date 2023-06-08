@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-color-main: #0a2351;
+    --primary-color: #022a75;
+    --secondary-color: #f99500;
+    --price-color: #ff0000;
+    --light-color: #f3f3f3;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/* cut across classes  */
+
+.nav-container {
+    background-color: var(--primary-color);
+    padding: 1rem 1rem;
+    box-shadow: 0 15px 5px linear-gradient(rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.73));
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-container .nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-container h5 {
+    color: #fff;
+}
+
+.nav-container .nav .ls-area a:hover {
+    color: var(--price-color);
+}
+
+.logo {
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.fa-solid {
+    color: var(--primary-color);
+}
+
+
+/* MAIN PAGE STYLING */
+.ls-area {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Showcase Area */
+.showcase-area {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: change 10s infinite ease-in-out;
+    background: url("/img/laptop1.jpg") no-repeat center center/cover;
+}
+
+.showcase-content {
+
+
+
+    /*
+    animation: change 16s infinite ease-in-out;
+    background: 
+        url("../img/boy.jpg") no-repeat center center/cover; */
+}
+
+@keyframes change {
+    /* 35% {
+        background: 
+            url("../img/girl.jpg") no-repeat center center/cover;
+    }
+
+    75% {
+        background: linear-gradient(rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.8)),
+            url("../img/girl\ 2.jpg") no-repeat center center/cover;
+    } */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-area {
+    width: 500px;
+    height: 60px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 5px transparent;
+    border-radius: 0.3rem;
+}
+
+.search-container .fa-solid {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Product area */
+.products-area {
+    width: 80%;
+    margin: auto;
+    padding-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.products-area .product-area-content {
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card {
+    padding-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 0.6rem;
+    transition: ease-out 300ms;
+    background-color: var(--primary-color);
+}
+
+.product-card .product-img {
+
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card p {
+    padding: 0 1rem;
+    color: #fff;
+}
+
+.product-card:hover {
+    box-shadow: 5px 10px 10px #777;
+    cursor: pointer;
+}
+
+.product-card .price-s {
+    color: var(--price-color);
+}
+
+/* footer */
+.footer-container {
+    background: var(--primary-color);
+    margin-top: 5rem;
+}
+
+.footer-container .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.25rem;
+    gap: 10.4rem;
+}
+
+.footer-container .footer-content p,
+.footer-container .footer-content .fa-brands {
+    color: #fff;
+}
+
+.footer-container .footer-content .social {
+    display: flex;
+    gap: 1rem;
+}
+
+#footer-login-page .footer-container {
+    margin-top: 0;
+}
+
+/* LOGIN PAGE  */
+
+.login-body {
+    background:
+        url("/img/sneaker4.jpg") no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    animation: change 16s infinite ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+}
+
+/* @keyframes change {
+    35% {
+        background:
+            url("/img/headphones3.jpg") no-repeat center center/cover;
+    }
+
+    55% {
+        background:
+            url("/img/plate2.jpg") no-repeat center center/cover;
+    }
+
+
+    75% {
+        background: linear-gradient(rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.8)),
+            url("/img/phone6.jpg") no-repeat center center/cover;
+    }
+} */
+
+.form-container {}
+
+
+.card-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container .card {
+
+    padding: 1rem;
+    border-radius: 13px;
+    background-color: #fff;
+}
+
+.card-container .card .login-input {
+    border: 0.7px solid #777;
+    height: 1.5rem;
+    outline: none;
+    border-radius: 4px;
+    padding: 8px;
+    display: block;
+    margin-top: 5px;
+}
+
+.card-container .card .submit {
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 1.3rem;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--primary-color-main);
+}
+
+.card-container .card .submit:hover {
+    opacity: 0.7;
+}
+
+/* MAIN LOGGED ON PAGE STYLING   */
+
+.main-sec-grid-area {
+    display: grid;
+    margin: auto;
+    width: 95%;
+    padding-top: 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+}
+
+.product-nav {
+
+    overflow-y: scroll;
+    background-color: #f4f4f4;
+    height: 300px;
+    width: 350px;
+    margin-top: 3.2rem;
+}
+
+.products-area-main {
+    width: 100%;
+    margin: auto;
+    padding-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+
+.products-area-main .product-area-content-main {
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.nav .nav-ul {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 0.3rem;
+
+}
+
+.user-nav-flex {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .nav-ul .user-background{
+    padding: 0.7rem;
+    border-radius: 50%;
+    /* background-color: #777; */
+   background-color:  #fff;
+}
+
+.nav .nav-ul .user-nav {
+    width: 15px;
+
+
+
+}
+
+.nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.nav ul li ul {
+    display: none;
+
+}
+
+
+
+.nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    left: -70px;
+    width: 150px;
+    margin-top: 0.1rem;
+    text-align: center;
+    background: #e7e7e7;
+    border-radius: 7px;
+    padding: 0.5rem;
+   
+}
+
+.nav ul li:hover ul li {
+    display: block;
+
+}
+
+.nav ul li:hover ul li a {
+    color: #333;
+}
+
+.nav ul li:hover ul li a:hover {
+    color: var(--price-color );
+}
+
+.sell {
+    padding: 0.5rem 1.7rem;
+    background-color: var(--price-color);
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 500;
+
+}
+.sell:hover{
+    opacity: 0.9;
+}
+.product-nav li {
+    height: 40px;
+    width: 100%;
+    padding: 8px;
+
+}
+
+.product-nav li:nth-child(odd){
+    color: #fff;
+    background-color: var(--primary-color-main);
+}
